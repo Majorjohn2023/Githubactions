@@ -17,3 +17,6 @@ select
     (total_purchases - lag(total_purchases) over (order by month)) as month_over_month_change
 from aggregated_purchases
 order by month
+
+
+-- asdadcadsc
