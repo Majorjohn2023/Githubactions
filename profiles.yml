@@ -1,0 +1,16 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: rb83340.europe-west4.gcp
+      user: ranjuramesh
+      password: NpI9UcA8Cn#9
+
+      # Connection details
+      role: accountadmin
+      database: rawdata_db
+      warehouse: compute_wh
+      schema: testing
+      threads: 4
+      client_session_keep_alive: False
