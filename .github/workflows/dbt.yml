@@ -1,0 +1,21 @@
+name: DBT CI
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Install dbt
+      run: pip install dbt
+    - name: Run dbt deps
+      run: dbt deps
+    - name: Run dbt models
+      run: dbt run
+    - name: Run dbt test
+      run: dbt test
