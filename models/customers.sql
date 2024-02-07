@@ -7,3 +7,5 @@ SELECT
     c_phone,
     c_acctbal
 FROM {{ source('tpch', 'customer') }}
+
+-- testing
